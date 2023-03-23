@@ -26,9 +26,9 @@ const userSchema = new Schema(
   }
 );
 
-// Create a virtual property `fullName` that gets and sets the user's full name
+
 userSchema.virtual('friendCount').get(function () {
-  return this.comments.length;
+  return this.friends.length;
 });
 
 // Initialize our User model
